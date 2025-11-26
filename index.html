@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golden Eye - Protege tu Dinero Digital</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #fff8e1; color: #5c3a00; }
+    header { background: linear-gradient(90deg, #b8860b, #ffd700); padding: 50px; text-align: center; color: #fff; }
+    header h1 { font-size: 36px; margin: 0; }
+    header p { font-size: 18px; margin-top: 10px; }
+    .contenedor { max-width: 900px; margin: 30px auto; padding: 20px; background: #fff3c2; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .boton { display: inline-block; background: #b8860b; color: white; padding: 12px 20px; border-radius: 8px; margin: 10px 0; cursor: pointer; font-size: 16px; text-decoration: none; }
+    .boton:hover { background: #996600; }
+    iframe { width: 100%; height: 250px; border: none; border-radius: 8px; margin-bottom: 10px; }
+    .pregunta { margin-bottom: 15px; padding: 12px; background: #fff8dc; border-radius: 8px; border: 1px solid #ffd700; }
+    .progreso { height: 20px; background: #ffd700; border-radius: 10px; overflow: hidden; margin: 20px 0; }
+    .progreso-bar { height: 100%; width: 0%; background: #b8860b; transition: width 0.5s; }
+    .interactivo { padding: 10px; background: #fff0b3; border-radius: 8px; margin: 10px 0; cursor: pointer; text-align: center; font-weight: bold; }
+    .correcto { background: #c8facc; }
+    .incorrecto { background: #ffc8c8; }
+    footer { background: #b8860b; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+    img { display: block; margin: 0 auto; width: 120px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Golden Eye</h1>
+  <p>Aprende a proteger tu dinero digital sin complicaciones</p>
+  <img src="https://cdn-icons-png.flaticon.com/512/102/102623.png" alt="Candado Dorado">
+  <div>
+    <a class="boton" href="#bienvenida">Comenzar</a>
+    <a class="boton" href="https://danabella724-arch.github.io/CURSO--CRIPTOMONEDAS/" target="_blank">Curso Completo</a>
+  </div>
+</header>
+
+<div class="contenedor" id="bienvenida">
+  <h2>Bienvenido a Golden Eye</h2>
+  <p>En esta página aprenderás sobre criptomonedas, cómo evitar estafas digitales y proteger tu dinero, de forma interactiva y divertida.</p>
+</div>
+
+<div class="contenedor" id="criptomonedas">
+  <h2>Qué son las Criptomonedas</h2>
+  <iframe src="https://www.youtube.com/embed/fXajsTkudb0" allowfullscreen></iframe>
+  <h3>Mini Quiz: ¿Sabías esto?</h3>
+  <div class="pregunta">
+    <p>1. ¿Bitcoin es una moneda física?</p>
+    <button class="interactivo" onclick="responder(this, false)">Sí</button>
+    <button class="interactivo" onclick="responder(this, true)">No</button>
+  </div>
+  <div class="pregunta">
+    <p>2. ¿Una criptomoneda es un activo digital?</p>
+    <button class="interactivo" onclick="responder(this, true)">Sí</button>
+    <button class="interactivo" onclick="responder(this, false)">No</button>
+  </div>
+</div>
+
+<div class="contenedor" id="estafas">
+  <h2>Estafas más comunes</h2>
+  <h3>Simulador “Elige tu aventura”</h3>
+  <p>Recibes un correo prometiendo duplicar tu dinero. ¿Qué haces?</p>
+  <button class="interactivo" onclick="responder(this,true)">Ignorar ✅</button>
+  <button class="interactivo" onclick="responder(this,false)">Responder ❌</button>
+</div>
+
+<div class="contenedor" id="proteger">
+  <h2>Cómo protegerse</h2>
+  <h3>Checklist interactivo</h3>
+  <label><input type="checkbox" onchange="actualizarProgreso()"> Usar 2FA</label><br>
+  <label><input type="checkbox" onchange="actualizarProgreso()"> No compartir claves privadas</label><br>
+  <label><input type="checkbox" onchange="actualizarProgreso()"> Verificar enlaces antes de hacer clic</label>
+  <div class="progreso">
+    <div class="progreso-bar" id="barraProgreso"></div>
+  </div>
+</div>
+
+<div class="contenedor" id="examen">
+  <h2>Examen Final</h2>
+  <div class="pregunta">
+    <p>1. ¿Qué es una billetera fría?</p>
+    <button class="interactivo" onclick="responder(this,true)">Wallet fuera de línea</button>
+    <button class="interactivo" onclick="responder(this,false)">App móvil</button>
+  </div>
+  <div class="pregunta">
+    <p>2. ¿Qué significa 2FA?</p>
+    <button class="interactivo" onclick="responder(this,true)">Autenticación de dos factores</button>
+    <button class="interactivo" onclick="responder(this,false)">Pago automático</button>
+  </div>
+  <p id="puntajeFinal"></p>
+  <button class="boton" onclick="generarCertificado()">Generar Certificado</button>
+</div>
+
+<div class="contenedor" id="historias">
+  <h2>Historias reales</h2>
+  <p>Juan respondió a un correo falso y perdió dinero. Aprendió a usar 2FA y nunca más cayó en estafas.</p>
+  <p>María guardaba sus criptos en wallets seguras y hoy protege sus inversiones sin miedo.</p>
+</div>
+
+<div class="contenedor" id="recursos">
+  <h2>Recursos y ayuda</h2>
+  <ul>
+    <li><a href="#" target="_blank">Guía rápida PDF para proteger tus criptos</a></li>
+    <li><a href="https://www.coindesk.com/learn" target="_blank">Sitio seguro para aprender sobre criptos</a></li>
+    <li><a href="https://www.binance.com/es/support" target="_blank">Soporte seguro de plataformas</a></li>
+  </ul>
+</div>
+
+<footer>© 2025 – Golden Eye</footer>
+
+<script>
+let puntos = 0;
+function responder(btn, correcto){
+  if(correcto){ btn.classList.add('correcto'); btn.innerText += " ✔"; puntos++; } 
+  else{ btn.classList.add('incorrecto'); btn.innerText += " ✖"; }
+  let botones = btn.parentNode.querySelectorAll('button');
+  botones.forEach(b => b.disabled = true);
+}
+function actualizarProgreso(){
+  let checkboxes = document.querySelectorAll('#proteger input[type=checkbox]');
+  let completados = 0;
+  checkboxes.forEach(c => { if(c.checked) completados++; });
+  let porcentaje = (completados / checkboxes.length) * 100;
+  document.getElementById('barraProgreso').style.width = porcentaje + "%";
+}
+function generarCertificado(){
+  const nombre = prompt("Ingresa tu nombre para el certificado:");
+  if(!nombre) return;
+  const fecha = new Date().toLocaleDateString();
+  const contenido = `Certificado de Aprobación\n\nSe certifica que ${nombre} aprobó el curso Golden Eye el día ${fecha}.`;
+  const blob = new Blob([contenido], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'Certificado_GoldenEye.txt';
+  link.click();
+  alert("¡Certificado generado!");
+}
+</script>
+
+</body>
+</html>
