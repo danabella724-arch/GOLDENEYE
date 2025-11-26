@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criptomonedas: ¿Realidad o Estafa?</title>
+<style>
+body { margin:0; font-family: Arial, sans-serif; background:#fff8e1; color:#222; }
+header { background: linear-gradient(90deg,#b8860b,#ffd700); padding:50px; text-align:center; color:white; }
+h1 { font-size:32px; margin:0; }
+.boton { display:block; background:#b8860b; color:white; padding:20px; font-size:20px; text-align:center; text-decoration:none; border-radius:10px; margin:15px auto; width:80%; max-width:300px; cursor:pointer; }
+.boton:hover { background:#ffd700; color:#000; }
+.contenedor { max-width:900px; margin:30px auto; padding:20px; background:white; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+.tarjeta { border:1px solid #b8860b; border-radius:10px; padding:15px; margin:10px 0; background:#fff4e0; cursor:pointer; transition: transform 0.2s; }
+.tarjeta:hover { transform: scale(1.05); background:#ffe08c; }
+iframe { width:100%; height:250px; border:none; border-radius:8px; margin-bottom:10px; }
+h2 { color:#b8860b; }
+.pregunta { margin-bottom:15px; }
+.pregunta button { margin-right:10px; margin-top:5px; padding:8px 15px; font-size:16px; border-radius:5px; border:none; cursor:pointer; }
+.pregunta button:hover { opacity:0.9; }
+#resultado { margin-top:20px; font-weight:bold; font-size:18px; color:#b8860b; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>🪙 Criptomonedas: ¿Realidad o Estafa?</h1>
+</header>
+
+<div class="contenedor" id="inicio">
+<a href="#introduccion" class="boton">▶️ Introducción</a>
+<a href="https://danabella724-arch.github.io/CURSO--CRIPTOMONEDAS/" target="_blank" class="boton">📘 Curso básico</a>
+<a href="#estafas" class="boton">⚠️ Estafas más comunes</a>
+<a href="#test" class="boton">🧠 Test interactivo</a>
+<a href="#ayuda" class="boton">☎️ Ayuda y denuncias</a>
+</div>
+
+<!-- Introducción -->
+<div class="contenedor" id="introduccion">
+<h2>¿Qué aprenderás aquí?</h2>
+<iframe src="https://www.youtube.com/embed/fXajsTkudb0"></iframe>
+
+<div class="tarjeta" onclick="alert('Una criptomoneda es un activo digital que utiliza criptografía y blockchain.')">
+¿Qué es una criptomoneda?</div>
+<div class="tarjeta" onclick="alert('Una estafa es un fraude que busca tu dinero o información personal.')">
+¿Qué es una estafa?</div>
+<div class="tarjeta" onclick="alert('Aprenderás a proteger tus claves, verificar empresas y evitar fraudes.')">
+¿Cómo proteger tu dinero?</div>
+</div>
+
+<!-- Curso básico -->
+<div class="contenedor" id="curso">
+<h2>Curso básico</h2>
+<div class="tarjeta" onclick="alert('Módulo 1: Conceptos básicos. Blockchain, billeteras, diferencias entre criptos reales y tokens inventados.')">
+Módulo 1: Conceptos básicos</div>
+<div class="tarjeta" onclick="alert('Módulo 2: Riesgos. Volatilidad, inversiones no garantizadas, posibilidad de perder dinero.')">
+Módulo 2: Riesgos</div>
+<div class="tarjeta" onclick="alert('Módulo 3: Estafas reales. Pirámides, señuelos en redes sociales, falsos asesores, apps falsas.')">
+Módulo 3: Estafas reales</div>
+<div class="tarjeta" onclick="alert('Módulo 4: Cómo protegerse. Consejos claros, señales de alerta, verificar empresas.')">
+Módulo 4: Cómo protegerse</div>
+</div>
+
+<!-- Estafas más comunes -->
+<div class="contenedor" id="estafas">
+<h2>Estafas más comunes</h2>
+<div class="tarjeta" onclick="alert('Doble de dinero “garantizado”: caso real de promesas falsas para estafar.')">
+🔴 Doble de dinero “garantizado”</div>
+<div class="tarjeta" onclick="alert('Falsos brokers con acento extranjero: ejemplo de engaños en llamadas.')">
+🟠 Falsos brokers con acento extranjero</div>
+<div class="tarjeta" onclick="alert('Apps que no permiten retirar dinero: muchas víctimas reportan pérdidas.')">
+🔴 Apps que no permiten retirar dinero</div>
+<div class="tarjeta" onclick="alert('Personas que piden controlar tu celular para robar información.')">
+🟠 Personas que piden controlar tu celular</div>
+<div class="tarjeta" onclick="alert('Promesas desde Facebook o WhatsApp: alertas de fraude común.')">
+🔴 Promesas desde Facebook o WhatsApp</div>
+</div>
+
+<!-- Test interactivo -->
+<div class="contenedor" id="test">
+<h2>Test interactivo</h2>
+
+<div class="pregunta">
+<p>1. ¿Es posible ganar dinero garantizado con criptomonedas?</p>
+<button onclick="verificar(this,true)">Sí</button>
+<button onclick="verificar(this,false)">No</button>
+</div>
+
+<div class="pregunta">
+<p>2. ¿Qué señales indican una estafa?</p>
+<button onclick="verificar(this,false)">Promesas de duplicar dinero rápido</button>
+<button onclick="verificar(this,true)">Promesas de ganancias garantizadas o presión para invertir</button>
+</div>
+
+<div class="pregunta">
+<p>3. ¿Qué debes hacer si alguien te pide acceso a tu computadora?</p>
+<button onclick="verificar(this,true)">No dar acceso y reportar</button>
+<button onclick="verificar(this,false)">Dar acceso inmediatamente</button>
+</div>
+
+<div id="resultado"></div>
+</div>
+
+<!-- Ayuda -->
+<div class="contenedor" id="ayuda">
+<h2>Ayuda y recursos</h2>
+<a href="https://danabella724-arch.github.io/CURSO--CRIPTOMONEDAS/" target="_blank" class="boton">📘 Curso básico</a>
+<p>Enlaces oficiales: <a href="https://www.gobierno.gob/seguridad" target="_blank">Seguridad digital</a></p>
+<a href="Guia_Criptomonedas.pdf" class="boton" download>📄 Descargar guía PDF</a>
+<ul>
+<li>✔ Usar 2FA</li>
+<li>✔ No compartir claves privadas</li>
+<li>✔ Verificar enlaces antes de hacer clic</li>
+</ul>
+</div>
+
+<footer style="background:#b8860b; color:white; text-align:center; padding:15px;">© 2025 – Golden Eye</footer>
+
+<script>
+let puntos = 0;
+
+function verificar(btn, correcto){
+  if(correcto){
+    btn.style.backgroundColor = 'green';
+    btn.innerText += ' ✔';
+    puntos++;
+  } else {
+    btn.style.backgroundColor = 'red';
+    btn.innerText += ' ✖';
+  }
+  // Desactivar botones hermanos
+  let siblings = btn.parentNode.querySelectorAll('button');
+  siblings.forEach(b => b.disabled = true);
+
+  // Mostrar resultado parcial
+  let totalPreguntas = document.querySelectorAll('.pregunta').length;
+  let respondidas = document.querySelectorAll('.pregunta button:disabled').length / 2;
+  if(respondidas === totalPreguntas){
+    document.getElementById('resultado').innerText = `¡Has completado el test! Puntaje: ${puntos} / ${totalPreguntas}`;
+  }
+}
+</script>
+
+</body>
+</html>
